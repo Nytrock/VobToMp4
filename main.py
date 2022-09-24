@@ -6,6 +6,7 @@ import os
 
 
 def main():
+    # Start message
     if not confirm_working('Welcome to VOB to mp4 converter. All ".VOB" files in the "video" folder will be '
                            'converted to ".mp4" and placed in the "results" folder. '
                            'Nothing will happen to the original files. And please do not interrupt the program! '
@@ -13,12 +14,14 @@ def main():
         write_to_console("The program has been interrupted.")
         return
 
+    # Check for "videos" folder
     if not os.path.exists("videos"):
         write_to_console('Error: Folder "videos" not found. Please create it in the same place where the '
                          'application is located and place the files for conversion there.')
         os.mkdir("videos")
         return
 
+    # Creating or cleaning "result" folder
     if not os.path.exists("result"):
         os.mkdir("result")
     else:
@@ -30,6 +33,7 @@ def main():
                 write_to_console("The program has been interrupted.")
                 return
 
+    # Converting from VOB to mp4
     write_to_console("Starting the conversion... Don't be afraid to see a lot of text next..", True)
     for name in glob.glob("videos/*.VOB"):
         filename = name.split("\\")[1]
@@ -38,6 +42,7 @@ def main():
     write_to_console("All files have been successfully converted")
 
 
+# Write something to the console
 def write_to_console(text: str, end=False) -> None:
     os.system('cls')
     if end:
@@ -46,6 +51,7 @@ def write_to_console(text: str, end=False) -> None:
         print(text, end='')
 
 
+# Confirmation of any action
 def confirm_working(text: str, full=False) -> bool:
     os.system('cls')
     if full:
@@ -62,7 +68,7 @@ def confirm_working(text: str, full=False) -> bool:
             print("Enter the correct answer (n - no, y - yes)")
 
 
-# Removing all files from the "materials" folder
+# Removing all files from the "videos" folder
 def clean_trash(path: str) -> None:
     dirlist = [f for f in os.listdir(path)]
     for f in dirlist:
@@ -75,5 +81,6 @@ def clean_trash(path: str) -> None:
             os.remove(fullname)
 
 
+# Start
 if __name__ == '__main__':
     main()
