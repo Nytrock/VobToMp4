@@ -1,8 +1,5 @@
 ffmpeg-python==0.2.0
 future==0.18.2
 pip==22.2.2
-pyee==9.0.4
-python-ffmpeg==1.0.14
 setuptools==65.1.1
-typing-extensions==4.3.0
 wheel==0.37.1
