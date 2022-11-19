@@ -38,7 +38,7 @@ def main():
     for name in glob.glob("videos/*.VOB"):
         filename = name.split("\\")[1]
         result = "result/" + filename[0:filename.rfind(".")] + ".mp4"
-        ffmpeg.input(name).output(result).run()
+        ffmpeg.input(name).output(result, ac=2).run()
     write_to_console("All files have been successfully converted")
 
 
