@@ -36,7 +36,8 @@ def main():
     # Converting from VOB to mp4
     write_to_console("Starting the conversion... Don't be afraid to see a lot of text next..", True)
     for name in glob.glob("videos/*.VOB"):
-        filename = name.split("\\")[1]
+        name = os.path.abspath(name)
+        filename = name.split("\\")[-1]
         result = "result/" + filename[0:filename.rfind(".")] + ".mp4"
         ffmpeg.input(name).output(result, ac=2).run()
     write_to_console("All files have been successfully converted")
