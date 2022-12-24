@@ -4,6 +4,9 @@ that work very slowly, they also have limitations in the form of file size. I do
 It allows you to convert VOB video to mp4 in a very simple way and it works quite fast. All that is required of you is to place the processed
 video to a special folder and run the program.
 
+# Requirements
+For the stable operation of both the source code and the full-fledged program, ffmeg must be installed on your device. You can download it [here](https://ffmpeg.org/). Also make sure that it was added to the system PATH after installation.
+
 # Instructions for use
 - Download latest release
 
