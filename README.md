@@ -21,7 +21,7 @@ do not be afraid of the appearance of a large amount of text when converting vid
 - Clone the repository
 
 ```shell
-git clone https://github.com/Nytrock/Vob_To_Mp4.git
+git clone https://github.com/Nytrock/VobToMp4.git
 ```
 
 - Install dependencies with requirements.txt
