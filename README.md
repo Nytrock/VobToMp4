@@ -1,3 +1,5 @@
+<p align="center"><img src="Logo.png" alt="Logo" width="256"></p>
+
 # Vob to mp4
 Have you ever faced the problem of converting videos from old DVDs to a more modern format? Free websites on the Internet not only
 that work very slowly, they also have limitations in the form of file size. I don’t want to pay for such a service at all, so I created this application!
